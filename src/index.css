@@ -1,13 +1,245 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+    --green: #495e57;
+    --yellow: #f4ce14;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5em 2em;
+}
+
+.logo {
+    width: 145px;
+    height: auto;
+}
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 2em;
+    font-size: 1.1rem;
+}
+
+.nav-list li {
+    cursor: pointer;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: "Karla", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Markazi Text", serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    flex: 1;
+    padding: 2em;
+}
+
+@media (max-width: 576px) {
+    .main {
+        padding: 1em;
+    }
+}
+
+.footer {
+    text-align: center;
+    margin-top: 2.75em;
+    margin-bottom: 1.25em;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.hero {
+    background-color: var(--green);
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 2em 1em;
+}
+
+.hero-text {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.title {
+    font-size: 54px;
+    color: var(--yellow);
+    margin: 0;
+    padding: 0;
+}
+
+.subtitle {
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.btn-primary {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 8px 16px;
+    gap: 10px;
+
+    width: 148px;
+    height: 35px;
+
+    background: var(--yellow);
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+
+    font-family: "Karla", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.card {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-price {
+    font-weight: bold;
+}
+
+.card-description {
+    font-size: 0.9rem;
+    color: #444;
+    flex-grow: 1;
+}
+
+.card-row {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    margin-top: 2em;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    background-color: #f2f2f2;
+    padding: 1.5em;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 300px;
+    flex: 1;
+}
+
+.testimonial-row {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    margin-top: 2em;
+    flex-wrap: wrap;
+}
+
+.testimonial-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0.5em 0;
+}
+
+.testimonial-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0.5em 0 0.25em;
+}
+
+.testimonial-quote {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.booking-container {
+    max-width: 600px;
+    margin: 2em auto;
+    padding: 0.75em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+select {
+    padding: 0.65em;
+    font-size: 1.1rem;
+}
+
+.error {
+    color: red;
+    font-size: 0.85rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }

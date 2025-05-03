@@ -1,0 +1,15 @@
+// Button
+
+const Button = ({ label, onClick, type = "button", style = {} }) => {
+    return (
+        <button
+            className="btn-primary"
+            type={type}
+            onClick={onClick}
+        >
+            {label}
+        </button>
+    );
+};
+
+export default Button;
