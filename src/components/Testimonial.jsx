@@ -2,10 +2,10 @@
 
 const Testimonial = ({ name, quote }) => {
     return (
-        <div className="testimonial">
-            <h3 className="testimonial-name">{name}</h3>
-            <p className="testimonial-quote">"{quote}"</p>
-        </div>
+        <figure className="testimonial">
+            <blockquote className="testimonial-quote">"{quote}"</blockquote>
+            <figcaption className="testimonial-name">— {name}</figcaption>
+        </figure>
     );
 };
 
